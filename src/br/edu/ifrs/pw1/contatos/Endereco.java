@@ -11,6 +11,10 @@ public class Endereco {
         this.cep = cep;
     }
 
+    public Endereco() {
+
+    }
+
     public String getLogradouro() {
         return logradouro;
     }
