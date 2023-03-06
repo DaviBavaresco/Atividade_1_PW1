@@ -37,10 +37,12 @@ public class Cliente {
     }
 
 
+
+
     @Override
     public String toString() {
         return "Cliente{" +
-                "telefone='" + telefone + '\'' +
+                "telefone='" + telefone +
                 ", enderecos=" + enderecos +
                 '}';
     }

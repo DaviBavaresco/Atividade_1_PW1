@@ -9,11 +9,12 @@ import java.util.Scanner;
 
 public class Test1 {
     public static void main(String[] args) {
-        Cliente cli = new Cliente();
+
         List<Endereco> enderecos= new ArrayList<Endereco>();
         Cpf cpf= new Cpf();
         ClientePessoaFisica cliPF= new ClientePessoaFisica();
         Scanner sc= new Scanner(System.in);
+
         System.out.println("Bem vindo.");
         System.out.println("Oque deseja fazer?");
         System.out.println("1-Cadastras Cliente");
@@ -23,24 +24,24 @@ public class Test1 {
         System.out.println("5-Listar todos os clientes");
         System.out.println("6-Sair");
         int decisao = sc.nextInt();
-        switch(decisao){
+        switch(decisao) {
             case 1:
                 System.out.println("Para fazer o cadastros precisamos de algumas informações");
                 System.out.println("Sobre o endereço");
                 System.out.println("Qual o logradouro?");
                 String log;
                 sc.nextLine();
-                log= sc.nextLine();
+                log = sc.nextLine();
 
                 System.out.println("Qual o complemento");
                 String compl;
-                compl= sc.nextLine();
+                compl = sc.nextLine();
 
                 System.out.println("Qual seu cep");
                 long cep;
-                cep=sc.nextLong();
+                cep = sc.nextLong();
 
-                Endereco ed= new Endereco(log,compl,cep);
+                Endereco ed = new Endereco(log, compl, cep);
                 enderecos.add(ed);
                 //endereco finalizado
 
@@ -49,45 +50,47 @@ public class Test1 {
                 System.out.println("Qual o nome?");
                 String nome;
                 sc.nextLine();
-                nome=sc.nextLine();
+                nome = sc.nextLine();
 
                 System.out.println("Qual o telefone");
                 String telefone;
-                telefone=sc.nextLine();
+                telefone = sc.nextLine();
                 //ss
-
-
-
 
 
                 System.out.println("Agora sobre os dados");
                 System.out.println("Qual o numero do CPF");
                 long num;
-                num=sc.nextLong();
+                num = sc.nextLong();
 
                 System.out.println("Qual o digito do CPF");
                 int dig;
-                dig=sc.nextInt();
+                dig = sc.nextInt();
+
+                ClientePessoaFisica cli = new ClientePessoaFisica();
 
                 cpf.setNumero(num);
                 cpf.setDigito(dig);
-                cli.adicionaEndereco(ed);
+                //cli.adicionaEndereco(ed);
+                cliPF.setTelefone(telefone);
+                cliPF.setEnderecos(enderecos);
                 cliPF.setNome(nome);
 
                 cliPF.setCpf(cpf);
 
+
                 System.out.println(cliPF.toString());
-
-
-
-
 
 
                 //terminar
                 break;
+        }
+
+
+
+
 
 
 
         }
     }
-}
