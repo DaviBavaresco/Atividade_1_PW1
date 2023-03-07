@@ -2,15 +2,16 @@ package br.edu.ifrs.pw1.clientes;
 
 import br.edu.ifrs.pw1.contatos.Endereco;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
     private String telefone;
-    private List<Endereco> enderecos;
+    private List<Endereco> enderecos= new ArrayList<Endereco>();
 
-    public Cliente(String telefone, List<Endereco> enderecos) {
+    public Cliente(String telefone ) {
         this.telefone = telefone;
-        this.enderecos = enderecos;
+
     }
     public Cliente(){
 
@@ -28,14 +29,17 @@ public class Cliente {
         return enderecos;
     }
 
-    public void adicionaEndereco(Endereco end){
-        this.enderecos.add(end);
+    public void adicionaEndereco(Endereco e){
+        this.enderecos.add(e);
     }
 
     public void setEnderecos(List<Endereco> enderecos) {
         this.enderecos = enderecos;
     }
 
+    public void test(){
+        System.out.println("Test");
+    }
 
 
 

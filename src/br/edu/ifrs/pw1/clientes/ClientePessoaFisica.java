@@ -10,8 +10,8 @@ public class ClientePessoaFisica extends Cliente {
    private String nome;
    private Cpf cpf;
 
-    public ClientePessoaFisica(String telefone, List<Endereco> enderecos,String nome, Cpf cpf) {
-        super(telefone, enderecos);
+    public ClientePessoaFisica(String telefone, String nome, Cpf cpf) {
+        super(telefone);
         this.nome=nome;
         this.cpf=cpf;
     }

@@ -1,5 +1,7 @@
 package br.edu.ifrs.pw1.contatos;
 
+import java.util.Scanner;
+
 public class Endereco {
     private String logradouro;
     private String complemento;
@@ -43,6 +45,7 @@ public class Endereco {
     this.complemento=compl;
     this.logradouro= log;
     }
+
 
 
     @Override
